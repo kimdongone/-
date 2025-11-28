@@ -1,0 +1,284 @@
+body{
+    background-color: #393939;
+    letter-spacing: -0.38px;
+}
+a{
+    color: inherit;
+    display: inline-block;
+}
+header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 123;
+    transition: 0.5s;
+}
+header.down{
+    filter: drop-shadow(0 0px 3px rgba(0 0 0));
+    background-color: #fff;
+}
+header.down h1.logo {
+    background: url('images/logo.svg') no-repeat center /cover;
+}
+header.down form.down{
+    display: none;
+}
+.scroll-progress{
+    background-color: #000;
+}
+.scroll-progress .bar{
+    width: 0;
+    background-color: #F9A51A;
+    height: 5px;
+}
+.header-inner{
+    margin: 0 auto;
+    width: 72.92vw;
+    position: relative;
+    padding-top: 20px;
+}
+.header-top{
+    padding-bottom: 20px;
+    /* border: 1px solid red; */
+}
+h1.logo {
+    width: 183px;
+    height: 27px;
+    background: url('images/logo-wh.svg') no-repeat center /cover;
+}
+header.down .user-menu{
+    top: 50%;
+    transform: translateY(-50%);
+}
+header.down nav {
+    color: black;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.user-menu{
+    display: flex;
+    top: 15px;
+    right: 0;
+    position: absolute;
+}
+a.go-follow{
+    width: 40px;
+    height: 40px;
+    background: url('images/follow-wh.svg') no-repeat center /cover;
+    text-indent: -9999px;
+}
+a.go-share{
+    width: 40px;
+    height: 40px;
+    background: url('images/share-wh.svg') no-repeat center /cover;
+}
+a.go-chat{
+    width: 40px;
+    height: 40px;
+    background: url('images/chat-wh.svg') no-repeat center /cover;
+}
+header.down a.go-follow{
+    background: url('images/follow.svg') no-repeat center /cover;
+    text-indent: -9999px;
+}
+header.down a.go-share{
+    background: url('images/share.svg') no-repeat center /cover;
+}
+header.down a.go-chat{
+    background: url('images/chat.svg') no-repeat center /cover;
+}
+ul.gnb{
+    display: flex;
+    gap: 10px;
+}
+ul.gnb a{
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+ul.gnb li:first-child a{
+    padding-left: 0px;
+}
+a.on{
+    position: relative;
+}
+a.on::after{
+    top: 10px;
+    right: 3px;
+    position: absolute;
+    border-radius: 50%;
+    display: inline-block;
+    content: '';
+    height: 5px;
+    width: 5px;
+    background-color: #F9A51A;
+}
+header.down form#search-form{
+    display: none;
+}
+#search-form{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #fff;
+    bottom: 2.5px;
+    right: 0;
+    position: absolute;
+}
+#search{
+    color: #BBBBBB;
+    font-weight: 400;
+    font-size: 13px;
+    border-style: none;
+    padding: 10px;
+}
+#search:focus{
+    outline: none;
+}
+input[type="submit"]{
+    cursor: pointer;
+    margin: 5px 7px;
+    text-indent: -9999px;
+    border-style: none;
+    width: 24px;
+    height: 24px;
+    background: url('images/search.svg') no-repeat center /cover;
+}
+button.search-big{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url('images/search-big.svg');
+    text-indent: -9999px;
+    cursor: pointer;
+    display: none;
+}
+header.down button.search-big{
+    display: inline-block;
+}
+header.down .gnb a{
+    color: #404041;
+}
+section#intro{
+    height: 780px;
+    background: url('images/bg-index.jpg') no-repeat center / cover;
+}
+section#start{
+    background: url('images/start-bg.jpg') no-repeat center / cover;
+    padding: 134px 0;
+    text-align: center;
+    position: relative;
+}
+#start h1{
+    font-weight: 600;
+    color: #33A9FF;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+#start p{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 65px;
+}
+.get-start{
+    display: inline-block;
+    border-radius: 39px;
+    background-color: #000;
+    padding: 22px 52px;
+}
+.get-start img{
+    margin-bottom: -4px;
+}
+#start article {
+    /* 아티클을 더 위로 올리기 위한 릴레티브 */
+    z-index: 1;
+    position: relative;
+}
+section#start::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .8;
+}
+section#hero{
+    padding: 150px 248px;
+    background-color: #EBEBEB;
+}
+section#hero article{
+    display: flex;
+    gap: 48px;
+}
+.hero-title{
+    height: 497px;
+    min-width: 331px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #000;
+    color: #fff;
+    background: url('images/c-bg.jpg') no-repeat center / cover;
+    padding-top: 62px;
+    /* 부모(바디)의 높이 안에서 잠시 고정, 좌표 필수 */
+    position: sticky;
+    left: 0;
+    top: 100px;
+}
+.hero-title strong{
+    font-size: 25px;
+}
+.hero-title p{
+    margin-top: 33px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    margin-bottom: 33px;
+}
+
+ul.hero-list{
+    gap: 16px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 1200px;
+    
+
+}
+.hero-list li {
+    
+    width: 247px;
+    height: 375px;
+}
+.hero-list img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section#genji{
+    padding: 134px 0;
+    text-align: center;
+}
+section#genji h1{
+    color: #F9A51A;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+section#genji p{
+    font-size: 22px;
+    line-height: 150%;
+    color: #fff;
+    filter: opacity(0.8);
+    margin-top: 65px;
+}
+footer{
+    background-color: #1F1F1F;
+    text-align: center;
+    padding: 108px 0;
+}
